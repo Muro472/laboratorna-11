@@ -28,7 +28,7 @@ class TCircle:
         return TCircle(self.r - other.r)
 
     def __mul__(self, other):
-        return self.r * other
+        return TCircle(self.r * other)
 
     def __gt__(self, other):
         return self.r > other.r
