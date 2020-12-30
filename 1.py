@@ -30,10 +30,6 @@ class TCircle:
     def __mul__(self, other):
         return self.r * other
 
-    def da(self,value):
-        value -= 1
-        return value
-
     def __gt__(self, other):
         return self.r > other.r
 
