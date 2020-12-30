@@ -22,10 +22,10 @@ class TCircle:
         return 2*pi*self.r
 
     def __add__(self, other):
-        return self.r + other
+        return TCircle(self.r + other.r)
 
     def __sub__(self, other):
-        return self.r - other
+        return TCircle(self.r - other.r)
 
     def __mul__(self, other):
         return self.r * other
@@ -33,6 +33,12 @@ class TCircle:
     def da(self,value):
         value -= 1
         return value
+
+    def __gt__(self, other):
+        return self.r > other.r
+
+    def __lt__(self, other):
+        return self.r < other.r
 
 
 c1 = TCircle(3)
